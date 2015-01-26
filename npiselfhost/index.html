@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+        <input id="input" type="text" />
+        <div id="results">WTF</div>
+        <script>
+        
+        var baseuri = "191.237.128.108:80/";
+
+        var $input = $("#input"),
+            $results = $("#results");
+
+		var TEST = function(term){
+
+		var jqxhr = $.getJSON( "api/npi/" + term, function( data ) {
+
+			console.log(data);
+
+		}) .done(function() {
+		console.log( "second success" );
+		})
+		.fail(function() {
+		console.log( "error" );
+		})
+		.always(function() {
+		console.log( "complete" );
+		});
+
+		};
+
+		var runthis = function(){
+
+		console.log("ran");
+                      /*
+		var input = $input.val().split(" ");
+
+		console.log(input);
+
+		if (input.length>1){
+		var result = input[1] + "_" + input[0].substring(0,1);
+                */
+		TEST($input.val());
+		
+
+
+		};
+
+
+
+        </script>
+
+</body>
+</html>

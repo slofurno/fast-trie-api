@@ -35,11 +35,13 @@ namespace npiselfhost
 
       var result = lresult.Where(x => x.fname.StartsWith(names[0], StringComparison.OrdinalIgnoreCase));
 
+      var dtos = result.Select(x => new npidto(x));
+
       sw.Stop();
       Console.WriteLine("first part : " + el1 + " ;  " + result.Count() + " results served in " + sw.Elapsed.TotalMilliseconds + "ms");
-      
 
-      return new JILResult(result, Request);      
+
+      return new JILResult<npidto>(dtos, Request);      
         
 
       //return "value";

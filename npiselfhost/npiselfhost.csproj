@@ -90,13 +90,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JILresult.cs" />
-    <Compile Include="NPI.cs" />
-    <Compile Include="npiController.cs" />
+    <Compile Include="Data\NPIContext.cs" />
+    <Compile Include="Data\JILresult.cs" />
+    <Compile Include="Models\NPI.cs" />
+    <Compile Include="Controllers\npiController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Tr.cs" />
+    <Compile Include="Models\Tr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

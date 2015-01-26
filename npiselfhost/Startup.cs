@@ -14,8 +14,7 @@ namespace npiselfhost
 
         HttpConfiguration config = new HttpConfiguration();
 
-        config.Formatters.RemoveAt(0);
-        config.Formatters.Insert(0, new JilFormatter());
+       
         
         config.MapHttpAttributeRoutes();
         var cors = new EnableCorsAttribute("*", "*", "*");
